@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Book</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>My Contacts</h1>
+
+    <form id="add-contact-form">
+        <h2>Add Contact</h2>
+        <input type="text" id="contact-name" placeholder="Name">
+        <input type="text" id="contact-number" placeholder="Number">
+        <input type="text" id="contact-email" placeholder="Email">
+        <input type="text" id="contact-address" placeholder="Home address">
+        <button type="submit">Add Contact</button>
+    </form>
+    <div id="filters">
+        <h2>Filter Contact</h2>
+        <div id="Search-button">
+            <button onclick="loadContacts()">All Contacts</button>
+        </div>
+        <div id="filter-inputs">
+            <input type="text" id="filter-contact" placeholder="Search contact">
+            <button onclick="searchContact()">Search Contact</button>
+        </div>
+    </div>
+    <div id="edit-contact-form">
+        <h2>Edit Contact</h2>
+        <input type="text" id="edit-contact" placeholder="Contact name">
+        <input type="text" id="user-edit" placeholder=" ">
+        <button onclick="editContact()">Update Contact</button>
+    </div>
+        
+    <div id="contacts-container">
+        <h2>Contacts</h2>
+        <ul id="contact-list"></ul>
+    </div>    
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>    
+
+
+
+
+
+
